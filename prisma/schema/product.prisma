@@ -12,7 +12,7 @@ model Product {
   category   Category? @relation(fields: [categoryId], references: [id])
   categoryId String?   @map("category_id")
 
-  user   User?   @relation(fields: [userId], references: [id])
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId String? @map("user_id")
 
   reviews    Review[]

@@ -66,8 +66,10 @@ export class UserService {
 		
 		const isExists = user.favorites.some(product => product.id === productId)
 		
-		return this.prisma.user.update({
-			where: { id: user.id },
+		await this.prisma.user.update({
+			where: {
+				id: user.id
+			},
 			data: {
 				favorites: {
 					[isExists ? 'disconnect' : 'connect']: {
@@ -76,5 +78,7 @@ export class UserService {
 				}
 			}
 		})
+		
+		return { message: 'Success' }
 	}
 }

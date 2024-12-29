@@ -39,7 +39,7 @@ const createProducts = async (quantity: number) => {
 							text: faker.lorem.paragraph(),
 							user: {
 								connect: {
-									id: "cm59sztp90000jy7lldwup6kr"
+									id: "cm59tvql50000149t4yb7p2y7"
 								}
 							}
 						},
@@ -48,11 +48,16 @@ const createProducts = async (quantity: number) => {
 							text: faker.lorem.paragraph(),
 							user: {
 								connect: {
-									id: "cm59sztp90000jy7lldwup6kr"
+									id: "cm59tvql50000149t4yb7p2y7"
 								}
 							}
 						}
 					]
+				},
+				user: {
+					connect: {
+						id: "cm59tvql50000149t4yb7p2y7"
+					}
 				}
 			}
 		})
