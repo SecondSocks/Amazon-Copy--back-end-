@@ -11,6 +11,7 @@ model User {
 
   phone String @default("")
 
-  orders  Order[]
-  reviews Review[]
+  orders    Order[]
+  reviews   Review[]
+  favorites Product[]
 }
