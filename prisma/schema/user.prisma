@@ -3,9 +3,11 @@ model User {
   createdAt DateTime @default(now()) @map("created_at")
   updatedAt DateTime @updatedAt @map("updated_at")
 
-  name      String @unique
-  avatarPath String  @default("/uploads/default.png") @map("avatar_path")
+  name       String @unique
+  avatarPath String @default("/uploads/default.png") @map("avatar_path")
 
-  email     String   @unique
-  password  String
+  email    String @unique
+  password String
+
+  phone String @default("")
 }

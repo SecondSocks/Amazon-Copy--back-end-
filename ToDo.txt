@@ -1,0 +1,1 @@
+Декомпозировать логику в AuthService через UserService
