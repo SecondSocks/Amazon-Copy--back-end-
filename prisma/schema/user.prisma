@@ -10,4 +10,7 @@ model User {
   password String
 
   phone String @default("")
+
+  orders  Order[]
+  reviews Review[]
 }
