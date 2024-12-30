@@ -14,4 +14,6 @@ model User {
   orders    Order[]
   reviews   Review[]
   favorites Product[]
+
+  @@map("user")
 }

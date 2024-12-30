@@ -17,4 +17,6 @@ model Product {
 
   reviews    Review[]
   orderItems OrderItem[]
+
+  @@map("product")
 }

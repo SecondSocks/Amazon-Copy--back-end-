@@ -23,13 +23,16 @@ const createProducts = async (quantity: number) => {
 					max: 999,
 					dec: 0
 				}),
-				slug: faker.helpers.slugify(productName),
+				slug: faker.helpers.slugify(productName).toLowerCase(),
 				images: Array.from({ length: getRandomNumber(2, 6) })
-					.map(() => faker.image.urlPicsumPhotos()),
+					.map(() => faker.image.urlPicsumPhotos({
+						width: 500,
+						height: 500
+					})),
 				category: {
 					create: {
 						name: categoryName,
-						slug: faker.helpers.slugify(categoryName)
+						slug: faker.helpers.slugify(categoryName).toLowerCase()
 					}
 				},
 				reviews: {
@@ -39,7 +42,7 @@ const createProducts = async (quantity: number) => {
 							text: faker.lorem.paragraph(),
 							user: {
 								connect: {
-									id: "cm59tvql50000149t4yb7p2y7"
+									id: "cm5akpq55000039757i69clp1"
 								}
 							}
 						},
@@ -48,7 +51,7 @@ const createProducts = async (quantity: number) => {
 							text: faker.lorem.paragraph(),
 							user: {
 								connect: {
-									id: "cm59tvql50000149t4yb7p2y7"
+									id: "cm5akpq55000039757i69clp1"
 								}
 							}
 						}
@@ -56,7 +59,7 @@ const createProducts = async (quantity: number) => {
 				},
 				user: {
 					connect: {
-						id: "cm59tvql50000149t4yb7p2y7"
+						id: "cm5akpq55000039757i69clp1"
 					}
 				}
 			}
